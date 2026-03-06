@@ -75,7 +75,7 @@ const Recopied: React.FC = () => {
               className="object-cover rounded-md mb-8 w-full h-auto"
             />
           )}
-          <div style={{ marginTop: 12 }}>
+          <div className="mt-3">
             <button
               onClick={handleToggleFavorite}
               disabled={!id}

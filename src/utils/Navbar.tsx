@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useNavigate, useSearchParams } from "react-router";
+import { Link, useNavigate, useSearchParams } from "react-router";
 
 type NavbarProps = {
   searchPath?: string;
@@ -40,12 +40,24 @@ const Navbar: React.FC<NavbarProps> = ({ searchPath = "/search" }) => {
             />
             <button
               type="submit"
-              className="shrink-0 rounded-md bg-black text-white px-3 py-2 text-sm"
+              className="shrink-0 rounded-md bg-black text-white px-3 py-2 text-sm cursor-pointer"
             >
               Search
             </button>
           </div>
         </form>
+        <Link
+          to="/"
+          className="inline-flex items-center text-black px-3 py-2 text-sm"
+        >
+          Home
+        </Link>
+        <Link
+          to="/favorites"
+          className="inline-flex items-center text-black px-3 py-2 text-sm"
+        >
+          Favorites
+        </Link>
       </div>
     </nav>
   );

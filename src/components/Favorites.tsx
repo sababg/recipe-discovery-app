@@ -46,6 +46,7 @@ const Favorites: React.FC = () => {
               title={r.strMeal}
               description={r.strCategory ?? ""}
               navigateTo={`/recipe/${r.idMeal}`}
+              hasFavorite
             />
           ))}
         </div>
